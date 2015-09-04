@@ -1,0 +1,241 @@
+/* ----------------------------------
+ * Lists
+ * ---------------------------------- */
+[data-type="list"] {
+ 
+
+}
+
+[data-type="list"] ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+[data-type="list"] strong {
+  font-weight: 500;
+}
+
+.p-li-inicio{
+  position: absolute;
+  width: 100%;
+  top:50%;
+  margin: -20px 0px 0px 0px;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 23px;
+}
+
+/* Title divisors */
+[data-type="list"] header {
+  padding: 0 1.5rem;
+  margin: 0;
+  font-size: 1.6rem;
+  height: 3rem;
+  line-height: 4rem;
+  font-weight: normal;
+  color: #ff4e00;
+  text-transform: uppercase;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* List items */
+[data-type="list"] li {
+  height: 20%;
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  color: #333;
+  display: block;
+  position: relative;
+}
+
+#li-segunda{
+  background: #03a9f4;
+}
+#header-segunda{
+  background: #03a9f4;
+}
+#li-terça{
+  background: #009688;
+}
+#header-terça{
+  background: #009688;
+}
+
+#li-quarta{
+  background:#3f51b5;
+}
+#header-quarta{
+  background:#3f51b5;
+}
+#li-quinta{
+  background: #e51c23;
+}
+#header-quinta{
+  background: #e51c23;
+}
+
+#li-sexta{
+  background: #795548;
+}
+#header-sexta{
+  background: #795548;
+}
+
+[data-type="list"] li:last-child {
+  border: none;
+}
+
+/* Pressed State */
+li a:active {
+  background-color: transparent; /* remove default color for active state */
+}
+
+ a {
+text-decoration: none;
+}
+
+[data-type="list"].active li:after,
+[data-type="list"] li > a:after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+
+  top: 0;
+  right: -1.5rem;
+  bottom: 0;
+}
+
+[data-type="list"].active li:active:after,
+[data-type="list"] li > a:active:after {
+  background-color: rgba(0,213,255,0.3);
+}
+
+/* Disabled */
+[data-type="list"] li[aria-disabled="true"] {
+  pointer-events: none;
+  opacity: 0.2;
+  border-color: #888;
+}
+
+/* Graphic content */
+[data-type="list"] aside {
+  float: left;
+  margin: 0 0.5rem 0 0;
+  height: 100%;
+  position: relative;
+}
+
+[data-type="list"] li > a aside,
+[data-type="list"] li > a aside.icon {
+  background-color: transparent;
+}
+
+[data-type="list"] aside.pack-end {
+  float: right;
+  margin: 0 0 0 0.5rem;
+  text-align: right;
+}
+
+[data-type="list"] aside.icon {
+  width: 3rem;
+  height: 6rem;
+  background: #fff no-repeat left center / 100% auto;
+  font-size: 0;
+  display: block;
+  overflow: hidden;
+}
+
+[data-type="list"] aside span[data-type=img],
+[data-type="list"] aside img {
+  display: block;
+  overflow: hidden;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 2.5rem;
+  margin-top: 0.5rem;
+  box-sizing: border-box;
+  box-shadow: 0 0 0 0.1rem #dedede;
+  background: transparent center center / cover;
+  position: relative;
+
+  /* Favor performance over quality */
+  image-rendering: -moz-crisp-edges;
+}
+
+/* Text content */
+[data-type="list"] li p {
+
+}
+
+
+[data-type="list"] li p:only-child,
+[data-type="list"] li p:first-of-type:last-of-type {
+  line-height: 4rem;
+}
+
+[data-type="list"] li p em {
+  font-size: 1.5rem;
+  font-style: normal;
+}
+
+[data-type="list"] li p time {
+  margin-right: 0.3rem;
+  text-transform: uppercase;
+}
+
+/* Checkable content */
+[data-type="list"] li > .pack-checkbox,
+[data-type="list"] li > .pack-radio,
+[data-type="list"] li > .pack-switch {
+  pointer-events: none;
+  position: absolute;
+  top: -0.1rem;
+  bottom: 0;
+  right: 0;
+  left: -4rem;
+  width: auto;
+  height: auto;
+}
+
+[data-type="list"] li > .pack-checkbox input ~ span:after,
+[data-type="list"] li > .pack-radio input ~ span:after,
+[data-type="list"] li > .pack-switch input ~ span:after {
+  left: 0;
+  margin-left: 0;
+}
+
+/* Edit mode */
+[data-type="list"] [data-type="edit"] li {
+  padding-left: 4rem;
+}
+
+[data-type="list"] [data-type="edit"] li > .pack-checkbox,
+[data-type="list"] [data-type="edit"] li > .pack-radio,
+[data-type="list"] [data-type="edit"] li > .pack-switch {
+  pointer-events: auto;
+  left: 0;
+}
+
+[data-type="list"] [data-type="edit"] li > a {
+  pointer-events: none;
+}
+
+[data-type="list"] [data-type="edit"] li > a:active:after,
+[data-type="list"] [data-type="edit"] li > a:hover:after {
+  display: none;
+}
+
+[data-type="list"] [data-type="edit"] aside.pack-end {
+  display: none;
+}
+
+/* Themes */
+.skin-comms [data-type="list"] header {
+  color: #4997a7;
+}
